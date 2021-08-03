@@ -1,0 +1,35 @@
+<script type="text/javascript">
+    
+    // Cумма чисел от 1 до n c логическими операциями
+    do{
+    	var n = +prompt("Input positive number");
+    } while(isNaN(n) || n < 0)
+  
+        var sum = 0;
+        for(var i = 0; i <= n; i++){
+             sum = sum + i; // sum =+ i;
+        }
+        document.write(sum);
+
+
+    // Cумма чисел от 1 до n
+/*    var n = +prompt("Input number");
+    
+    if(isNaN(n)){
+        document.write("Please, input number!");
+    } else if(n < 0){
+        document.write("Please, input positive number!");
+    } else {
+         var sum = 0;
+         for(var i = 0; i <= n; i++){
+             sum = sum + i; // sum =+ i;
+         }
+         document.write(sum);
+    }
+
+    var n = +prompt("Input first number");
+    for(var i = 0; i <= n; i++){
+        document.write(i + " ");
+    }*/
+    
+</script>

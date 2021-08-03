@@ -1,0 +1,19 @@
+</script>
+
+<meta charset="utf-8">
+<script type="text/javascript">
+var sum = +prompt("Введите сумму вклада: ");
+var percent = +prompt("Введите годовую ставку: ");
+percent = percent / 100;
+
+var year1 = ((sum * percent) + sum);
+    document.write ("За 1ый год сумма составит: " + (year1.toFixed(2)) + "руб<br>");
+var year2 = ((year1 * percent) + year1);
+    document.write ("За 2ой год сумма составит: " + (year2.toFixed(2)) + "руб<br>");
+var year3 = ((year2 * percent) + year2);
+    document.write ("За 3ий год сумма составит: " + (year3.toFixed(2)) + "руб<br>");
+var year4 = ((year3 * percent) + year3);
+    document.write ("За 4ый год сумма составит: " + (year4.toFixed(2)) + "руб<br>");
+var year5 = ((year4 * percent) + year4);
+    document.write ("За 5ый год сумма составит: " + (year5.toFixed(2)) + "руб<br>");
+</script>

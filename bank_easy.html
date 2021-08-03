@@ -1,0 +1,24 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+		var deposit = +prompt("Enter deposit amount $");
+        while (isNaN(deposit)|| deposit<0) {
+        deposit = +prompt("Enter correct deposit amount $ again!");
+        }
+
+		var percent = +prompt("Enter percent %");
+        while (isNaN(percent)|| percent<=0) {
+        percent = +prompt("Enter correct percent % again!");
+        }
+        
+        var answer1 = (deposit * percent * 0.01 + deposit)
+        var answer2 = (answer1 * percent * 0.01 + answer1)
+        var answer3 = (answer2 * percent * 0.01 + answer2)
+        var answer4 = (answer3 * percent * 0.01 + answer3)
+        var answer5 = (answer4 * percent * 0.01 + answer4)
+        
+        document.write("Deposit amount: " + deposit + "$" + "<br /> Percent: " + percent + "%" + "<br />" + "Number of years: " + 5 + "<br /><br />");
+        
+        document.write("1 year: " + answer1 + "<br />2 year: " + answer2 + "<br />3 year: " + answer3.toFixed(2) + "<br />4 year: " + answer4.toFixed(2) + "<br />5 year: " + answer5.toFixed(2));
+   
+</script>

@@ -1,0 +1,31 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+    alert("GUESSING GAME\nEnter the number of your attempts for which you will guess the number and maximum from the guessing range. Good luck!")
+
+	var maxTryCount = +prompt("Enter the number of your attempts");
+    var maxRange = +prompt("Enter the number that will be the maximum from the guessing range");
+    var answer = parseInt(Math.random() * maxRange);
+	var userAnswed = +prompt("Guess a number from 0 to " + maxRange);
+
+	for(var tryCount = 1; tryCount <= maxTryCount; tryCount++){
+		if(userAnswed == answer){
+			alert("Congratulations, you guessed the number!");
+            document.write("YOU WIN!");
+			break;
+			// contunue; - сразу переходим к сл итерации
+		} else if (userAnswed < answer) {
+			alert("You entered too small a number.");
+		} else if (userAnswed > answer) {
+			alert("You entered too large a number");
+		}
+
+        if(tryCount == maxTryCount){
+	    alert("GAME OVER | Correct answer: " + answer);
+            document.write("GAME OVER");
+            break;
+        }
+
+		userAnswed = +prompt("Try again! Guess a number from 0 to " + maxRange + "\nYou have " + (maxTryCount - tryCount) + " attempts left");
+	}
+
+</script>
