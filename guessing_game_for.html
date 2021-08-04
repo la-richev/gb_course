@@ -2,8 +2,8 @@
 <script type="text/javascript">
     alert("GUESSING GAME\nEnter the number of your attempts for which you will guess the number and maximum from the guessing range. Good luck!")
 
-	var maxTryCount = +prompt("Enter the number of your attempts");
-    var maxRange = +prompt("Enter the number that will be the maximum from the guessing range");
+	var maxTryCount = +prompt("Enter the number of your attempts"); // кол. попыток
+    var maxRange = +prompt("Enter the number that will be the maximum from the guessing range"); // мах число
     var answer = parseInt(Math.random() * maxRange);
 	var userAnswed = +prompt("Guess a number from 0 to " + maxRange);
 
