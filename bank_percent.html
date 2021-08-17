@@ -1,0 +1,25 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+    let deposit = +prompt("Enter deposit amount $");
+    while (isNaN(deposit)|| deposit<0) {
+        deposit = +prompt("Enter correct deposit amount $ again!");
+    }
+    let percent = +prompt("Enter percent %");
+    while (isNaN(percent)|| percent<=0) {
+        percent = +prompt("Enter correct percent % again!");
+    }
+    let maxYear = +prompt("Enter number of years");
+    while (isNaN(maxYear) || maxYear<=0) {
+        maxYear = +prompt("Enter correct number of years again!")
+    }
+
+    document.write("<b>Программа расчета банковского вклада по формуле сложных процентов</b>" + "<br><br>" +
+        "Deposit: " + deposit + "<br>" + "Percent: " + percent + "%" + "<br>" + "Max: " + maxYear + " year" + "<br><br>");
+
+    for(let year = 1; year <= maxYear; year++){
+        deposit = deposit + deposit * percent * 0.01;
+        document.write(year + " year: " + " " + deposit.toFixed(2) + "<br>");
+    }
+
+</script>

@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+<script type="text/javascript">
+
+    let arr = [];
+    let round = 100;
+    let zeros = 0;
+    let i = 0;
+
+for(i=0; i<=round; i++){
+    arr.push(Math.round(Math.random()*36));
+}
+
+alert(arr);
+
+for(i=0; i<arr.length; i++) {
+    if (arr[i] == 0) {
+        zeros++;
+    }
+}
+
+
+
+    frequency = zeros/arr.length*100;
+document.write("Частота выпадения зеро: " +  frequency.toFixed(2) + "%");
+
+</script>

@@ -1,0 +1,42 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+		let deposit = +prompt("Enter deposit amount $");
+        while (isNaN(deposit)|| deposit<0) {
+        deposit = +prompt("Enter correct deposit amount $ again!");
+        }
+		let percent = +prompt("Enter percent %");
+        while (isNaN(percent)|| percent<=0) {
+        percent = +prompt("Enter correct percent % again!");
+        }
+        let maxYear = +prompt("Enter number of years");
+        while (isNaN(maxYear) || maxYear<=0) {
+            maxYear = +prompt("Enter correct number of years again!")
+        }
+//        percentYear = (deposit/100) * percent;
+//        depositYear = deposit + percentYear;
+
+        for(let year = 1; year <= maxYear; year++){
+            // depositYear += percentYear;
+            let sum = (deposit * percent * 0.01 + deposit) + sum;
+            //deposit = deposit * percent * 0.01 + depositYear;
+            // depositYear = depositYear + percentYear
+            document.write(year + " year: " + " " + sum.toFixed(2) + "<br>");
+        }
+
+//            var sum = (deposit * percent * 0.01 + deposit);
+//            document.write("Deposit amount: " + deposit + "$" + "<br /> Percent: " + percent + "%" + "<br />" + "Number of years: " + maxYear + "<br /><br />");
+
+/* for(let year = 1; year <= maxYear; year++){
+//            var sum = (deposit * percent * 0.01 + deposit);
+            depositYear += percentYear
+            document.write(year + " year: " + " " + (depositYear - percentYear) + "<br>");
+        }
+
+//document.write("Deposit amount: " + sum + "$" + "<br /> Percent: " + percent + "%" + "<br />1 year: " + answer1 + "<br />2 year: " + answer2);
+
+
+*/
+</script>
+
+

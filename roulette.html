@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+<script type="text/javascript">
+
+    alert("Игра рулетка");
+
+    let n = 0;
+    /*  let y = parseInt(prompt("Играем? (введи 1)"))
+      while( y < 2 ){
+          y = parseInt(prompt("1"));
+          alert("Продолжим...");
+          do {
+              if ((Math.random() * 6) < 1) {
+                  alert("Финита ля комедия");
+                  break;
+              }
+              n++
+          } while (true);
+          alert("Раундов сыграно: " + n);
+          break;
+      }
+          alert("Game Over")*/
+        do {
+            if ((Math.random() * 6) < 1) {
+                alert("Финита ля комедия");
+                break;
+            }
+            n++
+        } while (prompt("Введите Y, если продолжаем") == "Y")
+
+        alert("Game Over")
+        alert("Раундов сыграно: " + n);
+
+</script>

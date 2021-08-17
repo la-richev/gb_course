@@ -1,0 +1,85 @@
+<meta charset="UTF-8">
+<script type="text/javascript">
+
+    let arr = [];
+    let rounds = 10000;
+    let zeros = 0;
+    let red = 0;
+    let black = 0;
+    let i = 0;
+    let number = 0;
+    let maxLength = 0;
+    let length = 0;
+
+    for(i=0; i<rounds; i++){  //определить четность или нечетность
+        number = Math.round(Math.random()*36);
+        if (number != 0) {
+            number = (number % 2) * 2 - 1;
+        }
+        arr.push(number);
+    }
+
+    /*
+   if ( number % 2 == 0) {
+       alert('Even Number');
+   }else {
+       alert('Odd Number');
+   } else
+       */
+
+    alert(arr);
+
+    for(i=0; i<arr.length; i++) {
+        if (arr[i] == 0) {
+            zeros++;
+        } else if (arr[i] == -1) {
+            red++;
+        } else if (arr[i] == 1) {
+            black++;
+        }
+
+    }
+
+    document.write("Частота выпадения зеро: " +  (zeros/arr.length*100).toFixed(2) + "% <br>");
+    document.write("Частота выпадения красного: " +  (red/arr.length*100).toFixed(2) + "% <br>");
+    document.write("Частота выпадения черного: " +  (black/arr.length*100).toFixed(2) + "% <br>");
+
+    document.write("Зеро: " + zeros + " | " + "Черный: " + black + " | " + "Красный: " + red + "<br><br>")
+
+    for(i=0; i<arr.length; i++) {
+        if (arr[i] == -1) {
+            length = 0;
+            while (i < arr.length && arr[i] == -1) {
+                i++;
+                length++;
+            }
+
+            if (length > maxLength) {
+                maxLength = length;
+            }
+        }
+    }
+
+    document.write("Мах длина красной последовательности: " + maxLength + "<br>");
+
+
+    /*  Варианты:
+    for (i=0; i<=rounds; i++) {
+    arr.push(Math.round(Math.random()*36));
+    }
+    document.write(arr + "<br><br>");
+
+    for(i=0; i<=arr.length; i++) {
+    if (arr[i] == 0) {
+    zeros++;
+    } else if (arr[i] == 2) {
+    red++;
+    } else if (arr[i] == 1) {
+    black++;
+    }
+    }
+
+    document.write("Зеро: " + zeros + " | " + "Черный: " + black + " | " + "Красный: " + red)
+    */
+
+</script>

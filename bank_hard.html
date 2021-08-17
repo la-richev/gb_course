@@ -15,16 +15,15 @@
         percent = +prompt("Enter correct percent % again!");
         }
         var maxYear = +prompt("Enter number of years");
-//        var maxYear = 5;
-        percentYear = ((deposit/100) * percent);
-        depositYear = (deposit + percentYear);
 
-        
+
             document.write("Deposit amount: " + deposit + "$" + "<br /> Percent: " + percent + "%" + "<br />" + "Number of years: " + maxYear + "<br /><br />");
 
         for(var year = 1; year <= maxYear; year++){
 //            var sum = (deposit * percent * 0.01 + deposit);
-            depositYear += percentYear
+            percentYear = ((deposit/100) * percent);
+            depositYear = (deposit + percentYear);
+            depositYear += percentYear //=deposit + percentYear
             document.write(year + " year: " + " " + (depositYear - percentYear) + "<br>");
         }
 
